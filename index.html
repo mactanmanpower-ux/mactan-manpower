@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mactan Manpower Solutions Inc. connects skilled professionals with leading companies in Mactan Economic Zone, Lapu-Lapu City, Cebu, Philippines.">
+
+<title>Mactan Manpower Solutions Inc.</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    line-height: 1.6;
+    background: #f9f4ef;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* HEADER */
+header {
+    background: #d00000;
+    color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header img.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+nav {
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: #d00000;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    background: #f2f2f2;
+}
+
+/* HERO */
+.hero {
+    background: #fff;
+    padding: 80px 20px 60px 20px;
+    text-align: center;
+}
+.hero img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.hero .tagline {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.hero .cta-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #d00000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.hero .cta-btn:hover {
+    background: #a80000;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ABOUT */
+/* PREMIUM COMPANY PROFILE DESIGN */
+#about {
+    background: #ffffff;
+    position: relative;
+}
+
+#about::before {
+    content: "MMSI";
+    position: absolute;
+    font-size: 150px;
+    font-weight: bold;
+    color: rgba(208, 0, 0, 0.04);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#about .content {
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+    line-height: 2;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+#about h3 {
+    margin-top: 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#about table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#about td {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#about td:first-child {
+    width: 40%;
+    font-weight: bold;
+}
+.company-profile {
+  position: relative;
+  padding: 100px 40px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Watermark background logo */
+.company-profile::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: url("https://uploads.onecompiler.io/44f4n4mbd/44f79sf6r/logo2.jpg") no-repeat center center;
+  background-size: contain;
+  opacity: 0.06; /* faded */
+  transform: translate(-50%, -50%);
+}
+
+.profile-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.label {
+  width: 280px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.content {
+  flex: 1;
+  text-align: justify;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.executive-summary {
+  position: relative;
+  padding: 100px 40px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Watermark logo */
+.executive-summary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: url("https://uploads.onecompiler.io/44f4n4mbd/44f79sf6r/logo2.jpg") no-repeat center center;
+  background-size: contain;
+  opacity: 0.05; /* very light */
+  transform: translate(-50%, -50%);
+}
+
+.summary-container {
+  max-width: 950px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.executive-summary h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.executive-summary h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.executive-summary p {
+  text-align: justify;
+  line-height: 2;
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+.affiliates {
+  position: relative;
+  padding: 100px 40px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Watermark */
+.affiliates::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: url("https://uploads.onecompiler.io/44f4n4mbd/44f79sf6r/logo2.jpg") no-repeat center center;
+  background-size: contain;
+  opacity: 0.05;
+  transform: translate(-50%, -50%);
+}
+
+.affiliates-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.affiliates h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.company-title {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 40px 0 20px;
+}
+/* ===== AFFILIATES SECTION ===== */
+.affiliates {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.affiliates-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* ===== CARD ===== */
+.affiliate-card {
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.affiliate-card h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* ===== ROW LAYOUT ===== */
+.affiliate-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* ===== LOGO ===== */
+.affiliate-logo img {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===== CONTENT ===== */
+.affiliate-content {
+  flex: 1;
+}
+
+.affiliate-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* ===== CLIENTS GRID ===== */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 40px;
+  margin-bottom: 15px;
+}
+
+.clients-grid ul {
+  padding-left: 20px;
+}
+
+/* ===== CONTAINER YARD ===== */
+.container-yard {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.container-yard span {
+  background: #eaeaea;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .affiliate-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .affiliate-logo img {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container-yard {
+    justify-content: center;
+  }
+
+  .affiliate-card {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+}
+.affiliate-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.affiliate-logo img {
+  width: 200px;
+}
+
+.affiliate-content {
+  flex: 1;
+  text-align: justify;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.clients-grid {
+  display: flex;
+  gap: 60px;
+  margin: 10px 0 20px;
+}
+.clients-section {
+  position: relative;
+  padding: 80px 20px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* WATERMARK LOGO */
+.clients-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: url("https://uploads.onecompiler.io/44f4n4mbd/44f79sf6r/logo2.jpg") no-repeat center center;
+  background-size: contain;
+  opacity: 0.05;
+  transform: translate(-50%, -50%);
+}
+
+/* Keep content above watermark */
+.clients-section .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Products Top */
+.products-top {
+  margin-bottom: 40px;
+}
+
+.products-top h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.products-top p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* Title */
+.clients-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+/* Table */
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.clients-table th {
+  background: #f4f4f4;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.clients-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.clients-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.clients-table tr:hover {
+  background: #f1f1f1;
+  transition: 0.3s;
+}
+
+
+.company-profile {
+  padding: 60px 20px;
+  background: #f4f6f9;
+}
+
+.company-profile h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #222;
+}
+
+.profile-item {
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-item h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.profile-item p {
+  line-height: 1.8;
+  color: #555;
+  font-size: 16px;
+}
+/* SERVICES */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    background: #fff;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: left;
+}
+.card:hover {
+    transform: translateY(-8px);
+}
+.card h3::before {
+    content: "✓ ";
+    color: #d00000;
+}
+
+/* FOOTER */
+footer {
+    background: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons a {
+    color: #fff;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 5px;
+    border-radius: 50%;
+    text-align: center;
+}
+.social-icons .facebook { background: #1877f2; }
+.social-icons .linkedin { background: #0077b5; }
+
+
+
+/* MOBILE */
+@media(max-width:768px){
+    header { flex-direction: column; gap: 10px; }
+    .services { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="https://uploads.onecompiler.io/44ewdnkuc/44ewmvjc5/PP.png" alt="MMSI Logo" class="logo">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <img src="https://uploads.onecompiler.io/44ewdnkuc/44ewcv234/logo2.jpg" alt="MMSI Logo">
+    <h1>Mactan Manpower Solutions, Inc.</h1>
+    <p class="tagline">Bridging Exceptional Talent with Exceptional Opportunities</p>
+    <p>MMSI connects skilled professionals with leading companies in Mactan Economic Zone, Lapu-Lapu City, Cebu.</p>
+    <a href="#contact" class="cta-btn">Contact Us</a>
+</section>
+
+<section id="about">
+    <h2>COMPANY PROFILE</h2>
+
+    <div class="content">
+
+        <p>
+            Mactan Manpower Solutions, Inc. (MMSI) is a SEC Registered company who is into manpower services supplying manpower requirements of Export Zone locators in the country.
+        </p>
+
+        <p>
+            Feeling the demand for an efficient and dedicated manpower resource necessary for the manufacturing operations within the Mactan Economic Zones (MEZ 1, 2 and CLIP – Cebu Light Industrial Park) and elsewhere, a group of long-time friends experienced in various industries pooled their talents and capabilities together forming a new company.
+        </p>
+
+        <p>
+            Engineer Virgilio S. Pongase (BOD), a patriarch in a construction conglomerate, led the group to a successful launching of the MACTAN MANPOWER SOLUTIONS, INC. (MMSI), the date of registration with the Securities and Exchange Commission. Immediately thereafter, it was granted a DOLE Certificate of Registration under DO 18-A which was recently upgraded to DO 174.
+        </p>
+
+        <p>
+            Engineer Virgilio S. Pongase (BOD), as he is fondly called, brought with him the natural talent of leadership and the values of hard work, dedication to duty, honesty and loyalty to the company. Together with the inputs from other business partners who were exposed to the culture of discipline, respect for authority, excellence at work – formed the basis for a well-balanced organization.
+        </p>
+
+        <p>
+            The first batch of our employees, who were assigned at MEZ 1, saw the light of an emerging company that nurtures the well-being of people working under its banner. Gradually, the company expanded its clientele within CLIP and the neighbouring town of Cordova. In due time, the record of its excellent service to clients and manifest care for its employees brought about goodwill and an upbringing of the standards of performance of legally contracted employees.
+        </p>
+
+        <h3>COMPANY DETAILS</h3>
+
+        <table>
+            <tr>
+                <td>Registered Name</td>
+                <td>Mactan Manpower Solutions, Inc.</td>
+            </tr>
+            <tr>
+                <td>SEC Reg. No.</td>
+                <td>CS201425899</td>
+            </tr>
+            <tr>
+                <td>Date of Registration</td>
+                <td>July 02, 2014</td>
+            </tr>
+            <tr>
+                <td>Capitalization started at</td>
+                <td>₱ 3,000,000.00 (Updated December 2018 under DO 174)</td>
+            </tr>
+            <tr>
+                <td>Current Capitalization</td>
+                <td>₱ 5,000,000.00</td>
+            </tr>
+        </table>
+
+    </div>
+</section>
+<section id="company-profile" class="company-profile">
+  <div class="profile-container">
+
+    <div class="profile-row">
+      <div class="label">Primary Purpose</div>
+      <div class="content">
+        To engage in the business of providing or furnishing of any and all forms or types 
+        of services and facilities relating to placement or employment of production workers 
+        to manufacturing firms, workers for local commercial or industrial establishments, 
+        the supply of janitorial, messenger, laundry, secretarial, collection and allied 
+        services to business entities.
+      </div>
+    </div>
+
+    <div class="profile-row">
+      <div class="label">Insurance Service Provider</div>
+      <div class="content">
+        LIFE & HEALTH HMP, INC.
+      </div>
+    </div>
+
+    <div class="profile-row">
+      <div class="label">Corporate Officers</div>
+      <div class="content">
+        Rolando Patalinjug – Chairman of the Board<br>
+        Renato T. Bontol – President<br>
+        Virginia E. Yu – General Manager / Corporate Secretary
+      </div>
+    </div>
+
+    <div class="profile-row">
+      <div class="label">Corporate Mission</div>
+      <div class="content">
+        To provide excellent manpower services that cater to the needs of its clients 
+        thereby raising the quality of products provided to customers.
+      </div>
+    </div>
+
+    <div class="profile-row">
+      <div class="label">Corporate Vision</div>
+      <div class="content">
+        To be the leading manpower services provider in Lapu-Lapu City and eventually 
+        in the Vismin area.
+      </div>
+    </div>
+
+    <div class="profile-row">
+      <div class="label">Bank Depository</div>
+      <div class="content">
+        PNB & PS Bank
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="executive-summary" class="executive-summary">
+  <div class="summary-container">
+
+    <h2>EXECUTIVE SUMMARY</h2>
+
+    <h3>Introduction</h3>
+
+    <p>
+      Mactan Manpower Solutions Incorporated (MMSI), is a manpower service provider 
+      that tailors the need of different industries well within and outside Mactan 
+      Economic Zone. MMSI advocate of helping the government in nation building, 
+      resolve unemployment by providing employment opportunity to qualified individuals 
+      compliant to Department Order 174-17, to help improve the lives and achieve 
+      better future individuals.
+    </p>
+
+    <p>
+      MMSI is a corporation duly registered by Security and Exchange and Department 
+      of Labor and Employment. MMSI started on July 02, 2014 as an accredited local 
+      manpower agency with a headcount of less than 100 under DO 174-17A.
+    </p>
+
+    <p>
+      Presently, MMSI has a total organic workforce of 14 including its Board of Directors. 
+      A total of more or less 800 workers are deployed in 18 client-locators in various 
+      economic zones of Lapu-Lapu City and other nearby cities of Cebu.
+    </p>
+
+    <p>
+      MMSI focuses on recruitment, such as background verification, screening, deployment 
+      and HR consulting. With a robust database of pre-screened candidates and a team of 
+      experienced recruiters, MMSI able to respond quickly to client needs, whether for 
+      temporary staffing, contract-based roles or permanent placements.
+    </p>
+
+    <p>
+      MMSI is driven by values of professionalism, reliability, and ethical recruitment. 
+      MMSI, maintain full compliance with local labor laws ensuring clients satisfaction 
+      and workers welfare. MMSI's goal is to become a trusted partner in workforce 
+      development, contributing to economic growth and sustainable employment.
+    </p>
+
+  </div>
+</section>
+<section id="affiliates" class="affiliates">
+  <div class="affiliates-container">
+
+    <h2 class="section-title">Affiliates</h2>
+
+    <!-- VISAYAS LAND -->
+    <div class="affiliate-card">
+      <h3>VISAYAS LAND REALTY SOLUTIONS INC.</h3>
+
+      <div class="affiliate-row">
+        <div class="affiliate-logo">
+          <img src="https://uploads.onecompiler.io/44ewdnkuc/44fawqm63/visland.png" alt="Visayas Land Logo">
+        </div>
+
+        <div class="affiliate-content">
+          <p>
+            <strong>VISAYAS LAND REALTY SOLUTIONS INC.</strong> was launched in January 2014 
+            to manage commercial and business establishment properties within and outside 
+            Mactan Economic Zone 1, Lapu-Lapu City. Also known as VISLAND, the company 
+            manages real estate, purchases or leases lands and buildings, and develops 
+            various real estate properties.
+          </p>
+
+          <h4>Clients</h4>
+          <div class="clients-grid">
+            <ul>
+              <li>Sports City Inc.</li>
+              <li>IV Health</li>
+              <li>Island Central Mall</li>
+              <li>Marina Seaview</li>
+            </ul>
+            <ul>
+              <li>Metrobank, Inc.</li>
+              <li>Kaiser Med. Lab</li>
+              <li>Mactan Wharf</li>
+                 <li>Visland Warehouse</li>
+            </ul>
+          </div>
+
+          <h4>Container Yard</h4>
+          <div class="container-yard">
+            <li> Autoliv</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>Lear Corp</li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIRLO -->
+    <div class="affiliate-card">
+      <h3>VIRLO CONSTRUCTION DEVELOPMENT CORP.</h3>
+
+      <div class="affiliate-row">
+        <div class="affiliate-logo">
+          <img src="https://uploads.onecompiler.io/44faqe8a6/44faptgav/virlo.jpg" alt="Virlo Logo">
+        </div>
+
+        <div class="affiliate-content">
+          <p>
+            Established in 1980, Virlo Construction is a stable construction firm 
+            licensed under PCAB AA category. It operates both government and private 
+            sector projects specializing in horizontal and vertical construction.
+          </p>
+
+          <p>
+            The company has extensive experience in infrastructure projects including 
+            roads, airports, bridges, irrigation systems, dams, reservoirs, ports, 
+            buildings, industrial plants, water treatment facilities, housing, and 
+            site development.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- POWERPLUS -->
+    <div class="affiliate-card">
+      <h3>POWERPLUS AGGREGATE SYSTEMS CO., LTD.</h3>
+
+      <div class="affiliate-row">
+        <div class="affiliate-logo">
+          <img src="https://uploads.onecompiler.io/44faqe8a6/44faptgav/ppl.jpg" alt="Powerplus Logo">
+        </div>
+
+        <div class="affiliate-content">
+          <p>
+            Providing high-quality aggregates and construction materials to clients, 
+            ensuring superior product standards and customer satisfaction.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="clients-section">
+  <div class="container">
+
+    <!-- PRODUCTS -->
+    <div class="products-top">
+      <h3>Products</h3>
+      <p>
+        G1/Crush gravel &nbsp;&nbsp;&nbsp;
+        ¾ Gravel &nbsp;&nbsp;&nbsp;
+        Wash/Crush Sand &nbsp;&nbsp;&nbsp;
+        Fine Sand &nbsp;&nbsp;&nbsp;
+        Garden Soil
+      </p>
+    </div>
+
+    <!-- OUR CLIENTS -->
+    <h2>OUR CLIENTS</h2>
+
+    <table class="clients-table">
+      <thead>
+        <tr>
+          <th>PARTNER INDUSTRY</th>
+          <th>LOCATION / ADDRESS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>QUEST DENTAL MATERIAL CORP.</td><td>MEZ 2, TAMIYA, LAPU-LAPU CITY</td></tr>
+        <tr><td>BP DENTAL INSTRUMENTS CORP.</td><td>MEZ 2, TAMIYA, LAPU-LAPU CITY</td></tr>
+        <tr><td>PHIL-UNION FROZEN FOODS INC.</td><td>MEZ 1, IBO, LAPU-LAPU CITY</td></tr>
+        <tr><td>PHIL-JAPAN METALS AND REFINED PRODUCTS</td><td>MEZ 1, IBO, LAPU-LAPU CITY</td></tr>
+        <tr><td>EXAS PHILS. INC.</td><td>MEZ 1, IBO, LAPU-LAPU CITY</td></tr>
+        <tr><td>TAIHEIYO CEMENT PHILS. INC.</td><td>SOUTH POB. SAN FERNANDO, CEBU</td></tr>
+        <tr><td>ELEMATEC PHILIPPINES CORP.</td><td>MEZ 1, IBO, LAPU-LAPU CITY</td></tr>
+        <tr><td>UNA INTERNATIONALE TRADING CORP.</td><td>TAYUD, LILO-AN, CEBU</td></tr>
+        <tr><td>BONNESMAIN SERVICES CORPORATION</td><td>BANILAD, MANDAUE CITY</td></tr>
+        <tr><td>BL CONCEPT SHELLS CRAFT TRADING</td><td>PUNTA ENGAÑO, LAPU-LAPU CITY</td></tr>
+        <tr><td>FONUS CEBU FEDERATIONS OF COOPERATIVE</td><td>R. COLINA ST., ALANG-ALANG, MANDAUE CITY</td></tr>
+        <tr><td>TOA KIKO CEBU CORP.</td><td>MEZ 1, IBO, LAPU-LAPU CITY</td></tr>
+        <tr><td>MLHUILLIER FOOD PRODUCT CORP.</td><td>H. ABELLANA ST., CANDUMAN, MANDAUE CITY</td></tr>
+        <tr><td>CORDOVA MULTIPURPOSE COOPERATIVE</td><td>POBLACION CORDOVA CEBU</td></tr>
+        <tr><td>SM GUUN ENVIRONMENTAL COMPANY INC.</td><td>TAYUD, CONSOLACION, CEBU</td></tr>
+        <tr><td>NUTSRV PHILIPPINES CORPORATION</td><td>MEZ 1, LAPU-LAPU CITY</td></tr>
+        <tr><td>COOKIES N’ DREAM</td><td>BASAK, LAPU-LAPU CITY</td></tr>
+        <tr><td>8990 HOUSING DEVELOPMENT CORP.</td><td>NEGROS RD., CEBU CITY</td></tr>
+        <tr><td>AJINOMOTO PHILS. FLAVORED FOODS INC.</td><td>MEPZ 2, BASAK, LAPU-LAPU CITY</td></tr>
+        <tr><td>BAISISEN GLOBAL CORPORATION</td><td>MEPZ 3, BASAK, LAPU-LAPU CITY</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+</section>
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Local Recruitment</h3>
+            <p>Providing qualified manpower for industrial and administrative roles.</p>
+        </div>
+        <div class="card">
+            <h3>Staffing Solutions</h3>
+            <p>Customized workforce planning and productivity optimization.</p>
+        </div>
+        <div class="card">
+            <h3>HR Support</h3>
+            <p>Employee management, training, and compliance assistance.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:mactan.manpower@gmail.com">mactan.manpower@gmail.com</a></p>
+    <p>Tel: 402-2231 </p>
+    <div class="social-icons">
+        <a href="https://web.facebook.com/profile.php?id=100063699747253" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Mactan Manpower Solutions, Inc.</p>
+</footer>
+
+
+
+<script>
+document.querySelectorAll('nav a').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    });
+});
+
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+}, {threshold: 0.2});
+
+sections.forEach(sec => observer.observe(sec));
+</script>
+
+</body>
+</html>
