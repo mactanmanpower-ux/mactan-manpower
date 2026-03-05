@@ -26,7 +26,6 @@ body {
 
 /* HEADER */
 header {
-    
     background: #d00000;
     color: #fff;
     padding: 15px 40px;
@@ -37,37 +36,36 @@ header {
     top: 0;
     z-index: 1000;
 }
-
 header img.logo {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    
+}
+nav {
+    display: flex;
+    gap: 15px;
 }
 nav a {
-    color: #fff;
-    padding: 10px 18px;
+    color: #d00000;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 25px;
-    transition: 0.3s;
+    font-weight: bold;
+}
+nav a:hover {
+    background: #f2f2f2;
 }
 
-nav a:hover {
-    background: #fff;
-    color: #d00000;
-}
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("https://images.unsplash.com/photo-1581093588401-22f3b6b3b9d7");
-    background-size: cover;
-    background-position: center;
-    color: white;
+    background: #fff;
+    padding: 80px 20px 60px 20px;
+    text-align: center;
 }
 .hero img {
-    max-width: 700px;
+    max-width: 500px;
     width: 100%;
     height: auto;
     margin-bottom: 20px;
@@ -601,20 +599,13 @@ footer {
 <body>
 
 <header>
-
-<div class="logo-area">
-<img src="PP.png" class="logo">
-
-<h3>Mactan Manpower Solutions</h3>
-</div>
-
-<nav>
+    <img src="https://uploads.onecompiler.io/44ewdnkuc/44ewmvjc5/PP.png" alt="MMSI Logo" class="logo">
+    <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
-
 </header>
 
 <section id="home" class="hero">
@@ -947,7 +938,7 @@ footer {
         <a href="https://web.facebook.com/profile.php?id=100063699747253" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="#" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
- <div style="margin-top:20px">
+    <div style="margin-top:20px">
 
 <iframe
 src="https://www.google.com/maps?q=Visland%20Bldg%20Admin%20Drive%20MEPZ%201%20Lapu-Lapu%20City%20Cebu%20Philippines&output=embed"
