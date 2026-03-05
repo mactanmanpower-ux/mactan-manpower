@@ -37,8 +37,8 @@ header {
     z-index: 1000;
 }
 header img.logo {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -570,69 +570,28 @@ footer {
 }
 
 /* SOCIAL ICONS */
-#contact {
-    text-align: center;
-    padding: 80px 20px;
-    background: #ffffff;
-}
-
-.contact-box {
-    margin-top: 25px;
-}
-
-/* Email Button */
-.email-btn {
-    display: inline-block;
-    background: #d00000;
-    color: #fff;
-    padding: 14px 30px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s ease;
-}
-
-.email-btn i {
-    margin-right: 8px;
-}
-
-.email-btn:hover {
-    background: #a80000;
-    transform: translateY(-3px);
-}
-
-/* Telephone Style */
-.contact-item {
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-}
-
-.contact-item i {
-    color: #d00000;
-    margin-right: 8px;
-}
-
-/* Facebook Icon */
 .social-icons {
-    margin-top: 25px;
+    margin-top: 10px;
 }
-
 .social-icons a {
+    color: #fff;
     display: inline-block;
     width: 45px;
     height: 45px;
     line-height: 45px;
+    margin: 0 5px;
     border-radius: 50%;
     text-align: center;
-    color: #fff;
-    font-size: 18px;
 }
+.social-icons .facebook { background: #1877f2; }
+.social-icons .linkedin { background: #0077b5; }
 
-.facebook {
-    background: #1877f2;
+
+
+/* MOBILE */
+@media(max-width:768px){
+    header { flex-direction: column; gap: 10px; }
+    .services { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
@@ -682,36 +641,30 @@ footer {
             The first batch of our employees, who were assigned at MEZ 1, saw the light of an emerging company that nurtures the well-being of people working under its banner. Gradually, the company expanded its clientele within CLIP and the neighbouring town of Cordova. In due time, the record of its excellent service to clients and manifest care for its employees brought about goodwill and an upbringing of the standards of performance of legally contracted employees.
         </p>
 
-        <h3 class="details-title">COMPANY DETAILS</h3>
+        <h3>COMPANY DETAILS</h3>
 
-<div class="company-details">
-
-    <div class="detail-item">
-        <span class="label">Registered Name</span>
-        <span class="value">Mactan Manpower Solutions, Inc.</span>
-    </div>
-
-    <div class="detail-item">
-        <span class="label">SEC Reg. No.</span>
-        <span class="value">CS201425899</span>
-    </div>
-
-    <div class="detail-item">
-        <span class="label">Date of Registration</span>
-        <span class="value">July 02, 2014</span>
-    </div>
-
-    <div class="detail-item">
-        <span class="label">Capitalization Started At</span>
-        <span class="value">₱ 3,000,000.00 (Updated December 2018 under DO 174)</span>
-    </div>
-
-    <div class="detail-item">
-        <span class="label">Current Capitalization</span>
-        <span class="value">₱ 5,000,000.00</span>
-    </div>
-
-</div>
+        <table>
+            <tr>
+                <td>Registered Name</td>
+                <td>Mactan Manpower Solutions, Inc.</td>
+            </tr>
+            <tr>
+                <td>SEC Reg. No.</td>
+                <td>CS201425899</td>
+            </tr>
+            <tr>
+                <td>Date of Registration</td>
+                <td>July 02, 2014</td>
+            </tr>
+            <tr>
+                <td>Capitalization started at</td>
+                <td>₱ 3,000,000.00 (Updated December 2018 under DO 174)</td>
+            </tr>
+            <tr>
+                <td>Current Capitalization</td>
+                <td>₱ 5,000,000.00</td>
+            </tr>
+        </table>
 
     </div>
 </section>
@@ -979,29 +932,11 @@ footer {
 
 <section id="contact">
     <h2>Contact Information</h2>
-
-    <div class="contact-box">
-
-        <!-- Email Button -->
-        <a href="mailto:mactan.manpower@gmail.com" class="email-btn">
-            <i class="fas fa-envelope"></i> Email Us
-        </a>
-
-        <!-- Telephone -->
-        <div class="contact-item">
-            <i class="fas fa-phone-alt"></i>
-            <span>402-2231</span>
-        </div>
-
-        <!-- Facebook Only -->
-        <div class="social-icons">
-            <a href="https://web.facebook.com/profile.php?id=100063699747253" 
-               class="facebook" 
-               target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </div>
-
+    <p>Email: <a href="mailto:mactan.manpower@gmail.com">mactan.manpower@gmail.com</a></p>
+    <p>Tel: 402-2231 </p>
+    <div class="social-icons">
+        <a href="https://web.facebook.com/profile.php?id=100063699747253" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
 </section>
 
